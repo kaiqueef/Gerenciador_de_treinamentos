@@ -178,15 +178,17 @@ public class Functions {
          */
 
         Sistema.posicaoEncontrada[0]= -1; Sistema.posicaoEncontrada[1]= -1;
-        for (int j=0;j< ceil((float)Sistema.listaDePessoas.size()/ Sistema.listaDeSalas.size());j++) {
-            for (int i=0;i<Sistema.listaDeSalas.size()+Sistema.listaDeEspacos.size();i++){
-                if (Sistema.listaCompleta.get(i*2+periodo).get(j+1)!=null) {
-                    if (Sistema.listaCompleta.get(i * 2 + periodo).get(j + 1).equals(busca)) {
-                        Sistema.posicaoEncontrada[0] = i * 2 + periodo;
-                        Sistema.posicaoEncontrada[1] = j + 1;
-                        if (room)                        return true;
+        for (int j=0;j<= ceil((float)Sistema.listaDePessoas.size()/ Sistema.listaDeSalas.size());j++) {
+            for (int i=0;i<Sistema.listaDeSalas.size()+Sistema.listaDeEspacos.size();i++) {
+                try {
+                    if (Sistema.listaCompleta.get(i * 2 + periodo).get(j + 1) != null) {
+                        if (Sistema.listaCompleta.get(i * 2 + periodo).get(j + 1).equals(busca)) {
+                            Sistema.posicaoEncontrada[0] = i * 2 + periodo;
+                            Sistema.posicaoEncontrada[1] = j + 1;
+                            if (room) return true;
+                        }
                     }
-                }
+                }  catch (Exception x){}
             }
         }
         return false;
