@@ -28,14 +28,16 @@ Crie uma interface que permita:
 	
 ## Tecnologias
 Projeto criado com:
-* Java version: 11.0.10
+* Java version: 15.0.02
 * ItelliJ IDEA version: 2020.2.3
 	
 ## Setup
 Para rodar este projeto:
 - Instale as tecnologias descritas no tópico acima;
-- Abra a pasta "PROGRAMA DE GERENCIAMENTO" utilizando o IntelliJ
-- Compilar e rodar a classe "Sistema".
+- Crie um novo projeto utilizando o IntelliJ chamado "PROGRAMA DE GERENCIAMENTO"
+- Copiar as classes de "scr" para a pasta "scr" do projeto criado
+- Build -> Build project
+- Run -> Run 'Sistema'
 
 ## Instruções de utilização
 Ao executar o programa, será exibida uma lista de possíveis ações à serem tomadas, como: Cadastro/Consulta de pessoas, salas e espaços de café, além de sair, que irá printar a lista completa de pessoas, salas e espaços de café em cada etapa do treinamento e não deixará realizar mais modificações.
